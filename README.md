@@ -5,16 +5,11 @@
 </div>
 
 <div align="center">
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=zhumaidang.baozi)
-[![GitHub Repo stars](https://img.shields.io/github/stars/zhumaidang.baozi?style=social)](https://github.com/zhumaidang/baozi/stargazers)
-[![GitHub Code License](https://img.shields.io/github/license/zhumaidang/baozi)](LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/commits/main)
-
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=zhumaidang.baozi)
 [![GitHub Repo stars](https://img.shields.io/github/stars/zhumaidang/baozi?style=social)](https://github.com/zhumaidang/baozi/stargazers)
-[![GitHub License](https://img.shields.io/github/license/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/blob/main/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/commits/main)
+[![GitHub License](https://img.shields.io/github/license/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/blob/dev/LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/commits/dev)
 
 </div>
 
