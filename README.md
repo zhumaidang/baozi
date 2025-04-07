@@ -22,6 +22,13 @@
 # Update
 
 <details close>
+<summary> <b>2025-04-07</b></summary>
+
+- 分布式训练：单机多卡分布式训练
+
+</details>
+
+<details close>
 <summary> <b>2025-03-25</b></summary>
 
 - 分词：基于字符分词、基于词的分词、wordpiece（BPE、BBPE）
