@@ -23,6 +23,7 @@
 
 <details close>
 <summary> <b>2025-04-07</b></summary>
+
 - 分布式训练：单机多卡分布式训练
 
 </details>
