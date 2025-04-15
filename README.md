@@ -22,6 +22,14 @@
 # Update
 
 <details close>
+<summary> <b>2025-04-15</b></summary>
+
+
+- MoE：混合专家模型
+
+</details>
+
+<details close>
 <summary> <b>2025-04-07</b></summary>
 
 - 分布式训练：单机多卡分布式训练
