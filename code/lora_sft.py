@@ -40,20 +40,21 @@ def train_epoch(epoch, wandb):
         with ctx:
             res = model(X)
             loss = loss_fct(
-                res.logits.view(-1, res.logits.size(-1)),
-                Y.view(-1)
-            ).view(Y.size())
+                res.logits.view(-1, res.logits.size(-1)),  # shape: (batch_size * seq_len, vocab_size)
+                Y.view(-1)  # shape: (batch_size * seq_len)
+            ).view(Y.size())  # shape:(batch_size, seq_len)
             loss = (loss * loss_mask).sum() / loss_mask.sum()
             loss += res.aux_loss
             loss = loss / args.accumulation_steps
 
+        # 放大loss
         scaler.scale(loss).backward()
 
         if (step + 1) % args.accumulation_steps == 0:
-            scaler.unscale_(optimizer)
-            torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)
+            scaler.unscale_(optimizer)  # 将之前放大得梯度还原
+            torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_clip)  # 对模型参数得梯度进行裁剪，确保其L2范数不超过grad_clip
 
-            scaler.step(optimizer)
+            scaler.step(optimizer)  # 缩小梯度再更新参数
             scaler.update()
 
             optimizer.zero_grad(set_to_none=True)
@@ -108,7 +109,7 @@ if __name__ == "__main__":
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--batch_size", type=int, default=32)
     parser.add_argument("--learning_rate", type=float, default=5e-5)
-    parser.add_argument("--device", type=str, default="cuda:0" if torch.cuda.is_available() else "cpu")
+    parser.add_argument("--device",  type=str,default="cuda:0" if torch.cuda.is_available() else "cpu")
     parser.add_argument("--dtype", type=str, default="bfloat16")
     parser.add_argument("--use_wandb", action="store_true")
     parser.add_argument("--wandb_project", type=str, default="MiniMind-LoRA-SFT")
@@ -135,7 +136,8 @@ if __name__ == "__main__":
     tokens_per_iter = args.batch_size * lm_config.max_seq_len
     device_type = "cuda" if "cuda" in args.device else "cpu"
 
-    ctx = nullcontext() if device_type == "cpu" else torch.cuda.amp.autocast()
+    # 混合精度（AMP）是pytorch的一种训练、推理加速方法，自动将部分计算用float16进行，减少显存占用，提高训练速度。
+    ctx = nullcontext() if device_type == "cpu" else torch.cuda.amp.autocast()  # 上下文管理器，控制一段代码再某种环境下执行
     ddp = int(os.environ.get("RANK", -1))!= -1
     ddp_local_rank, DEVICE = 0, "cuda:0"
     base_seed = 1337
@@ -167,9 +169,14 @@ if __name__ == "__main__":
         print(f"Total LoRA parameters: {lora_params_count / total_params * 100:.2f}%")
     
     for name, param in model.named_parameters():
+        if 'lora' not in name:
+            param.requires_grad = False
+    lora_params = []
+    for name, param in model.named_parameters():
         if 'lora' in name:
             lora_params.append(param)
 
+    # 只对LoRA参数进行优化
     optimizer = optim.AdamW(lora_params, lr=args.learning_rate)
     train_ds = SFTDataset(args.data_path, tokenizer, max_length=lm_config.max_seq_len)
     train_sampler = DistributedSampler(train_ds) if ddp else None
@@ -183,6 +190,8 @@ if __name__ == "__main__":
         sampler=train_sampler 
     )
 
+    # 初始化混合精度训练中梯度缩放器，并根据args.dtype决定是否启用它
+    # GradScaler会自动方法损失值，防止梯度下溢，并在反向传播时自动缩小梯度
     scaler = torch.cuda.amp.GradScaler(enabled=(args.dtype in ['float16', 'bfloat16']))
     iter_per_epoch = len(train_loader)
 

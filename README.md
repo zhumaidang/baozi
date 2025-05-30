@@ -5,7 +5,6 @@
 </div>
 
 <div align="center">
-
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=zhumaidang.baozi)
 [![GitHub Repo stars](https://img.shields.io/github/stars/zhumaidang/baozi?style=social)](https://github.com/zhumaidang/baozi/stargazers)
 [![GitHub License](https://img.shields.io/github/license/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/blob/dev/LICENSE)
@@ -22,16 +21,18 @@
 # Update
 
 <details close>
-<summary> <b>2025-05-12</b></summary>
+<summary> <b>2025-05-30</b></summary>
+
 
 - Attention：Flash Attention
+- RLHF：PPO，DPO，GRPO
+- 训练推理模型（实现路径：1. 模型蒸馏；2.强化学习）
+- 模型蒸馏（黑盒蒸馏，白盒蒸馏）
 
-
+</details>
 
 <details close>
 <summary> <b>2025-04-15</b></summary>
-
-
 - MoE：混合专家模型
 
 </details>
@@ -47,7 +48,7 @@
 <summary> <b>2025-03-25</b></summary>
 
 - 分词：基于字符分词、基于词的分词、wordpiece（BPE、BBPE）
-- 位置位置：整形编码、零一编码、二进制向量编码、周期函数编码、sin和cos交替编码
+- 位置编码：整形编码、零一编码、二进制向量编码、周期函数编码、sin和cos交替编码
 
 </details>
 
