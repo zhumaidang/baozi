@@ -4,18 +4,12 @@
 
 </div>
 
-<p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=zhumaidang.baozi" alt="Visitors">
-  <a href="https://github.com/zhumaidang/baozi/stargazers">
-    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/zhumaidang/https%3A%2F%2Fgithub.com%2Fzhumaidang%2Fbaozi.git?style=social">
-  </a>
-  <a href="https://github.com/zhumaidang/baozi/blob/dev/LICENSE">
-    <img src="https://img.shields.io/github/license/zhumaidang/baozi" alt="License">
-  </a>
-  <a href="https://github.com/zhumaidang/baozi/commits/dev">
-    <img src="https://img.shields.io/github/last-commit/zhumaidang/baozi" alt="Last Commit">
-  </a>
-</p>
+
+![GitHub Repo stars](https://img.shields.io/github/stars/zhumaidang/baozi)
+![Bitbucket open issues ](https://img.shields.io/bitbucket/issues/zhumaidang/baozi)
+![GitHub License](https://img.shields.io/github/license/zhumaidang/baozi)
+![GitHub watchers](https://img.shields.io/github/watchers/zhumaidang/baozi)
+
 
 # Introduction
 
