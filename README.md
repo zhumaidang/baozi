@@ -5,10 +5,16 @@
 </div>
 
 
-![GitHub Repo stars](https://img.shields.io/github/stars/zhumaidang/baozi)
-![Bitbucket open issues ](https://img.shields.io/bitbucket/issues/zhumaidang/baozi)
-![GitHub License](https://img.shields.io/github/license/zhumaidang/baozi)
-![GitHub watchers](https://img.shields.io/github/watchers/zhumaidang/baozi)
+<div align="center">
+
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=jingyaogong/minimind)
+[![GitHub Repo stars](https://img.shields.io/github/stars/zhumaidang/baozi?style=social)](https://github.com/zhumaidang/baozi/stargazers)
+[![GitHub Code License](https://img.shields.io/github/license/jingyaogong/minimind)](LICENSE)
+[![GitHub last commit](https://img.shields.io/github/last-commit/jingyaogong/minimind)](https://github.com/jingyaogong/minimind/commits/master)
+[![GitHub pull request](https://img.shields.io/badge/PRs-welcome-blue)](https://github.com/jingyaogong/minimind/pulls)
+[![Collection](https://img.shields.io/badge/🤗-MiniMind%20%20Collection-blue)](https://huggingface.co/collections/jingyaogong/minimind-66caf8d999f5c7fa64f399e5)
+
+</div>
 
 
 # Introduction
