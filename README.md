@@ -4,13 +4,18 @@
 
 </div>
 
-<div align="center">
-![visitors](https://visitor-badge.laobi.icu/badge?page_id=zhumaidang.baozi)
-[![GitHub Repo stars](https://img.shields.io/github/stars/zhumaidang/baozi?style=social)](https://github.com/zhumaidang/baozi/stargazers)
-[![GitHub License](https://img.shields.io/github/license/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/blob/dev/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/zhumaidang/baozi)](https://github.com/zhumaidang/baozi/commits/dev)
-
-</div>
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=zhumaidang.baozi" alt="Visitors">
+  <a href="https://github.com/zhumaidang/baozi/stargazers">
+    <img src="https://img.shields.io/github/stars/zhumaidang/baozi?style=social" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/zhumaidang/baozi/blob/dev/LICENSE">
+    <img src="https://img.shields.io/github/license/zhumaidang/baozi" alt="License">
+  </a>
+  <a href="https://github.com/zhumaidang/baozi/commits/dev">
+    <img src="https://img.shields.io/github/last-commit/zhumaidang/baozi" alt="Last Commit">
+  </a>
+</p>
 
 # Introduction
 
@@ -22,8 +27,6 @@
 
 <details close>
 <summary> <b>2025-05-30</b></summary>
-
-
 - Attention：Flash Attention
 - RLHF：PPO，DPO，GRPO
 - 训练推理模型（实现路径：1. 模型蒸馏；2.强化学习）
