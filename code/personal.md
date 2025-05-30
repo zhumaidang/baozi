@@ -11,4 +11,4 @@
 - [x] 位置旋转编码（RoPE：既包含相对位置信息也包含绝对位置信息）
 - [x] BPE分词器、BBPE
 - [x] 混合专家网络
-- [ ] flash attention
+- [x] flash attention
